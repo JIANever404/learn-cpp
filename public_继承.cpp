@@ -41,8 +41,8 @@ public:
     {
         cout << a << endl;//可以，因为是public成员
         cout << a1 << endl;//可以，基类的public成员，public继承后在派生类中依然是public成员
-        cout << a2 << endl;//可以，基类的protected成员，在派生类中仍然可以被访问
-        //cout << a3 << endl;//不可以，基类的private成员，只能在基类中被访问，在派生类中不可以被访问（比protected成员等级低）
+        cout << a2 << endl;//可以，基类的protected成员，在这里继承之后仍然是protected，可以在class之中进行访问
+        //cout << a3 << endl;//不可以，基类的private成员，只能在基类中被访问
     }
 };
 
@@ -51,8 +51,8 @@ int main()
     B b(10);//定义一个类为B的对象b，并初始化
     cout << b.a << endl;//可以，public
     cout << b.a1 << endl;//可以，public
-    //cout << b.a2 << endl;//不可以，a2是protected成员由基类中继承而来的，只能在派生类中被访问
-    //cout << b.a3 << endl;//不可以，a3是private成员，在派生类中都被访问不了，别说在外面了
+    //cout << b.a2 << endl;//不可以，a2是protected成员由基类中继承而来的，只能在类中被访问
+    //cout << b.a3 << endl;//不可以，a3是private成员，只能在基类中被访问
 
     return 0;
 }
