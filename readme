@@ -9,3 +9,5 @@ https://www.runoob.com/cplusplus/cpp-class-access-modifiers.html （protected）
 但无论哪种继承方式，上面两点都没有改变：
 1.private 成员只能被本类成员（类内）和友元访问，不能被派生类访问；
 2.protected 成员可以被派生类访问。
+
+![avatar](继承方式.png)
