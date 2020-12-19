@@ -4,7 +4,7 @@
 //this 指针是所有成员函数的隐含参数。
 //在成员函数内部，它可以用来指向调用对象。
 //友元函数没有 this 指针，因为友元不是类的成员。只有成员函数才有 this 指针。
-
+//this 指针可以访问类的任意成员，包括private
 using namespace std;
 
 class Box
