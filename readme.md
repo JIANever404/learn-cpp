@@ -1,5 +1,4 @@
 教程地址：https://www.runoob.com/cplusplus/cpp-tutorial.html  
-进度：https://www.runoob.com/cplusplus/cpp-polymorphism.html 
 
 1.public 继承：基类 public 成员，protected 成员，private 成员的访问属性在派生类中分别变成：public, protected, private  
 2.protected 继承：基类 public 成员，protected 成员，private 成员的访问属性在派生类中分别变成：protected, protected, private  
