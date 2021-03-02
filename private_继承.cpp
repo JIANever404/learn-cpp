@@ -1,47 +1,57 @@
-#include<iostream>
-#include<assert.h>
-#include<stdlib.h>
+#include <iostream>
+#include <assert.h>
+#include <stdlib.h>
 using namespace std;
-class A{
+class A
+{
 public:
   int a;
-  A(){
+  A()
+  {
     a1 = 1;
     a2 = 2;
     a3 = 3;
     a = 4;
   }
-  void fun(){
-    cout << a << endl;    //正确
-    cout << a1 << endl;   //正确
-    cout << a2 << endl;   //正确
-    cout << a3 << endl;   //正确
-}
+  void fun()
+  {
+    cout << a << endl;  //正确
+    cout << a1 << endl; //正确
+    cout << a2 << endl; //正确
+    cout << a3 << endl; //正确
+  }
+
 public:
   int a1;
+
 protected:
   int a2;
+
 private:
   int a3;
 };
 
-class B : private A{
+class B : private A
+{
 public:
   int a;
-  B(int i){
+  B(int i)
+  {
     A();
     a = i;
   }
-  void fun(){
-    cout << a << endl;       //正确，public成员。
-    cout << a1 << endl;       //正确，基类public成员,在派生类中变成了private,可以在类中访问
-    cout << a2 << endl;       //正确，基类的protected成员，在派生类中变成了private,可以在类中访问
+  void fun()
+  {
+    cout << a << endl;  //正确，public成员。
+    cout << a1 << endl; //正确，基类public成员,在派生类中变成了private,可以在类中访问
+    cout << a2 << endl; //正确，基类的protected成员，在派生类中变成了private,可以在类中访问
     //cout << a3 << endl;       //错误，基类的private成员只能在基类中进行访问
   }
 };
-int main(){
+int main()
+{
   B b(10);
-  cout << b.a << endl;       //正确。public成员
+  cout << b.a << endl; //正确。public成员
   //cout << b.a1 << endl;      //错误，private成员不能在类外访问。
   //cout << b.a2 << endl;      //错误, private成员不能在类外访问。
   //cout << b.a3 << endl;      //错误，基类中的private成员只能在基类中进行访问
